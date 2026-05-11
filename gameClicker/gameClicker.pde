@@ -4,13 +4,19 @@ final int  menu = 2;
 final int  game = 3;
 final int  pause = 4;
 final int  lose = 5;
+//TARGET VAR--------------------------------------------------------------------------------------------------------------------
+float x,y,d, vx, vy;
+
+
+//COLOR PLACE---------------------------------------------------------------------------------------------------------------------
 
 
 void setup() {
   size(600, 600);
 
-
-
+  x = width/2;
+  y = height/2;
+  d = 100;
   mode = start;
 }
 
@@ -19,6 +25,7 @@ void setup() {
 
 void draw() {
   if (mode == start) {
+    Start();
   } else if (mode == menu) {
     Menu();
   } else if (mode == game) {

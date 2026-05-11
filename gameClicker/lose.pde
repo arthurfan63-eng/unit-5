@@ -2,3 +2,10 @@ void Lose(){
   
   
 }
+
+void loseClicks(){
+  
+  
+  
+  
+}

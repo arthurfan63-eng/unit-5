@@ -2,3 +2,10 @@ void Pause(){
   
   
 }
+
+void pauseClicks(){
+  
+  
+  
+  
+}
