@@ -1,0 +1,10 @@
+void Pause(){
+  
+  
+}
+
+
+void pauseClicks(){
+  
+  
+}

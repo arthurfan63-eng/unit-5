@@ -1,23 +1,30 @@
 void Start(){
-    theme.pause();
-    theme.rewind();
 
-
-    intro.play();
-  vx = random(-5,5);
-  vy = random(-5,5);
-  
   background(black);
   textSize(60);
   fill(white);
-  text("boring clicker game", 300,300);
+  text("boring ping game", 300,200);
   tactile(300,450,200,100,black);
   fill(white);
   rect(300,450,200,100);
   strokeWeight(0);
   tactile(50,50,50,50,red);
   fill(black);
-  text("start", 300,450);
+  text("1 player", 300,450);
+  
+  fill(black);
+  textSize(60);
+  tactile(300,350,200,100,black);
+  fill(white);
+  rect(300,350,200,100);
+  fill(black);
+
+  text("2 player", 300,350); 
+  
+  
+  
+  
+  strokeWeight(0);
   fill(white);
   square(50,50,50);
   fill(black);

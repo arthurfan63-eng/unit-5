@@ -45,10 +45,7 @@ void setup() {
   rectMode(CENTER);
   //minim
   minim = new Minim(this);
-  theme = minim.loadFile("theme.mp3");
-  click = minim.loadFile("universfield-computer-mouse-click-351398 (1).mp3");
-  intro = minim.loadFile("Succession_TV_Theme-637376-mobiles24.mp3");
-  boom = minim.loadFile("bithuh-vine-boom-392646.mp3");
+
   //slider stuff
   floater = 5;
   floatie = 5;
@@ -63,8 +60,6 @@ void setup() {
 void draw() {
   if (mode == start) {
     Start();
-  } else if (mode == menu) {
-    Menu();
   } else if (mode == game) {
     Game();
   } else if (mode == pause) {
@@ -84,6 +79,7 @@ void tactile(float x, float y,float x1,float y1, color c){
  strokeWeight(5);
   if (mouseX>x- (x1/2) && mouseX<x+ (x1/2) && mouseY > y- (y1/2) && mouseY< y+ (y1/2)){
     stroke(c);
+      textSize(50);
   } else{
     stroke(255);
   }
@@ -92,4 +88,19 @@ void tactile(float x, float y,float x1,float y1, color c){
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   

@@ -1,10 +1,13 @@
 void Pause(){
-    background(111);
+    background(black);
    text("game paused" ,300,100);
-   fill(0);
+   fill(black);
+   tactile(200,300,150,100,black);
    rect(200,300,150,100);
+   strokeWeight(10);
+   tactile(400,300,150,100,black);
    rect(400,300,150,100);
-   fill(255);
+   fill(white);
    text("restart",200,300);
    text("continue",400,300);
   
