@@ -14,10 +14,11 @@ final int  menu = 2;
 final int  game = 3;
 final int  pause = 4;
 final int  lose = 5;
-//TARGET VAR--------------------------------------------------------------------------------------------------------------------
-float x,y,d, vx, vy;
+//paddle + ball VAR--------------------------------------------------------------------------------------------------------------------
+float lx,ly,ld,rx,ry,rd, vx, vy;
 int score,heart,hiScore;
 float floater,floatie,sliderY;
+float ballx,bally,balld;
 
 //COLOR PLACE---------------------------------------------------------------------------------------------------------------------
 color white = 255;
@@ -27,20 +28,29 @@ color yellow = #9D9A3E;
 color colorsel = 0;
 //soundCheck---
 boolean soundoff = false;
-
+//keyboard var
+boolean wkee,skee,ukee,dkee;
 
 
 
 void setup() {
-  size(600, 600);
-  vx = random(-5,5);
-  vy = random(-5,5);
-  x = width/2;
-  y = height/2;
+  size(800, 600);
+  vx = random(5,50);
+  vy = random(5,50);
+  lx = 0;
+  ly = height/2;
+  ld = 200;
+  rx = width;
+  ry = height/2;
+  rd = 200;  
+  ballx = width/2;
+  bally = height/2;
+  balld = 100;
   hiScore = 0;
   score = 0;
   heart = 3;
   mode = start;
+  wkee=skee=ukee=dkee = false;
   textAlign(CENTER,CENTER);
   rectMode(CENTER);
   //minim
@@ -50,7 +60,7 @@ void setup() {
   floater = 5;
   floatie = 5;
   sliderY = 75;
-  d = 50;
+
 
 }
 
