@@ -1,4 +1,4 @@
-void mouseReleased(){
+ void mouseReleased(){
   if (mode == start){
     startClicks();
   }else if (mode == game){

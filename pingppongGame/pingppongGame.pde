@@ -1,4 +1,4 @@
-import ddf.minim.*;
+ import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
 import ddf.minim.signals.*;
@@ -6,7 +6,7 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //sounds
 Minim minim;
-AudioPlayer theme,click,intro,boom;
+AudioPlayer theme,click,intro,boom,click2;
  
 int mode;
 final int  start = 1;
@@ -30,19 +30,22 @@ color colorsel = 0;
 boolean soundoff = false;
 //keyboard var
 boolean wkee,skee,ukee,dkee;
-
-
+//AI
+boolean AI;
+//scoreboard
+int ls,rs,timer;
 
 void setup() {
   size(800, 600);
-  vx = random(5,50);
-  vy = random(5,50);
+  vx = random(-5,10);
+  vy = random(5,10);
   lx = 0;
   ly = height/2;
   ld = 200;
   rx = width;
   ry = height/2;
   rd = 200;  
+  ls = rs = timer = 0;
   ballx = width/2;
   bally = height/2;
   balld = 100;
@@ -55,7 +58,11 @@ void setup() {
   rectMode(CENTER);
   //minim
   minim = new Minim(this);
-
+  theme = minim.loadFile("homelander-going-crazy-angry-violin-theme-song.mp3");
+  click = minim.loadFile("freesound_community-thump-105302 (2).mp3");
+  intro = minim.loadFile("Succession_TV_Theme-637376-mobiles24.mp3");
+  boom = minim.loadFile("bithuh-vine-boom-392646.mp3");
+  click2 = minim.loadFile("mrstokes302-cartoon-bonk-sfx-mrstokes302-424181.mp3"); 
   //slider stuff
   floater = 5;
   floatie = 5;
