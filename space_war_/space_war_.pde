@@ -20,6 +20,7 @@ void setup(){
   size(1400, 800);
   textAlign(CENTER,CENTER); 
 mode = game;
+  textS = 150;
 }
 
 
