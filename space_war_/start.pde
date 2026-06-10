@@ -30,3 +30,13 @@ void star(float x, float y,float size,float grow,float max){
  }
   
 }
+
+
+
+
+
+void startClicks(){
+  mode = game;
+  
+  
+}

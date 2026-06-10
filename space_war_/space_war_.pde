@@ -19,7 +19,7 @@ int ls,rs,timer;
 void setup(){
   size(1400, 800);
   textAlign(CENTER,CENTER); 
-mode = game;
+mode = start;
   textS = 150;
 }
 

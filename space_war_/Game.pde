@@ -1,5 +1,5 @@
-float shipX1 = 200;
-float shipY1 = 200;
+float shipX1 = 0;
+float shipY1 = 0;
 float rotation1 = 0;
 float speed1 = 3;
 
@@ -17,7 +17,8 @@ boolean rotateA2 = false;
 boolean rotateD2 = false;
 boolean goW2 = false;
 
-
+float frontip2x;
+float frontip2y;
 
 
 int speed = 5;
@@ -27,7 +28,7 @@ void drawShip(float shipX, float shipY, float rotation) {
   //Frontp
   float x1 = shipX + cos(rotation) * size;
   float y1 = shipY + sin(rotation) * size;
-
+  
   //Backl
   float x2 = shipX + cos(rotation + 2.5) * size;
   float y2 = shipY + sin(rotation + 2.5) * size;
@@ -48,6 +49,7 @@ void drawShip(float shipX, float shipY, float rotation) {
 
 void Game() {
   background(0);
+  fill(255);
   drawShip(shipX1, shipY1, rotation1);
  
     if (rotateA == true) {
@@ -63,20 +65,39 @@ void Game() {
     shipY1 += sin(rotation1) * speed;
   }
   
-  
-  
+  ship2();
+
+}
+
+
+
+
+
+
+
+void ship2(){
+     fill(150);  
     drawShip(shipX2, shipY2, rotation2);
- 
-    if (rotateA == true) {
+
+    if (rotateA2 == true) {
     rotation2 -= 0.1;
   }
 
-  if (rotateD == true) {
+  if (rotateD2 == true) {
     rotation2 += 0.1;
   }
 
-  if (goW == true) {
-    shipX2 += cos(rotation1) * speed;
-    shipY2 += sin(rotation1) * speed;
+  if (goW2 == true) {
+    shipX2 += cos(rotation2) * speed;
+    shipY2 += sin(rotation2) * speed;
   }
+  if (keyPressed) {
+    if (key == 'o' || key == 'O') {
+         bullet(shipX2,shipY2,shipX2 - cos(rotation2) * 20,shipY2 - sin(rotation2) * 20);
+    }
+  }
+
+   
+
+  
 }
