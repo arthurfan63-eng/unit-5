@@ -67,6 +67,24 @@ void Game() {
   
   ship2();
 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
 }
 
 
@@ -91,13 +109,35 @@ void ship2(){
     shipX2 += cos(rotation2) * speed;
     shipY2 += sin(rotation2) * speed;
   }
-  if (keyPressed) {
-    if (key == 'o' || key == 'O') {
-         bullet(shipX2,shipY2,shipX2 - cos(rotation2) * 20,shipY2 - sin(rotation2) * 20);
-    }
+
+if (keyPressed) {
+  if (key == 'o' || key == 'O') {
+    bullets.add(
+      new Bullet(
+        shipX2,
+        shipY2,
+        shipX2 - cos(rotation2) * 20,
+        shipY2 - sin(rotation2) * 20,
+        shipX1,
+        shipX2
+      )
+    );
   }
+}
 
    
+for (Bullet b : bullets) {
+  b.move();
+  b.show();
+}
+
+
+
+
+
+
+
+
 
   
 }
